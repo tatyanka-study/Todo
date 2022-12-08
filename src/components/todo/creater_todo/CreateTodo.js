@@ -1,10 +1,16 @@
-function CreateTodo ({elementOfArray, setChangeArray}) {    
+function CreateTodo ({objectOfArray, setChangeArray}) {    
     
        const createNewTask = (event) => {
         event.preventDefault()
-
-        let inputValue = document.querySelector(".taskName").value       
-        let newInputArray = [...elementOfArray, inputValue]
+        let newCreateObject = {}
+        
+        newCreateObject.textFromInput = document.querySelector(".taskName").value  
+        function getRandomId () {
+            newCreateObject.id = Math.floor(Math.random() * 10000)
+        }
+        getRandomId ()
+        // newCreateObject.id = () => Math.floor(Math.random() * 10000)
+        let newInputArray = [...objectOfArray, newCreateObject]
         setChangeArray(newInputArray)
         console.log(newInputArray)
         document.querySelector(".taskName").value = ''                

@@ -3,12 +3,12 @@ import CreateTodo from "./creater_todo/CreateTodo"
 import TodoList from "./todo_list/TodoList"
 
 function Todo () {
-    const [newTasks, setTask] = useState([])      
+    const [newTasks, setTaskTodo] = useState([])      
 
     return (
         <div>
             <h1>Todo App</h1>
-            <CreateTodo elementOfArray={newTasks} setChangeArray={setTask}
+            <CreateTodo objectOfArray={newTasks} setChangeArray={setTaskTodo}
             />
             <TodoList data={newTasks}/>
         </div>

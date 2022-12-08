@@ -1,8 +1,12 @@
-function TodoItem () {
+import { Icon } from 'semantic-ui-react'
+
+function TodoItem ({item}) {
     return (
         <div className="list_item">
-            <i class="clipboard list icon"></i>
-
-        </div>
+             <Icon disabled name='clipboard list' /> {item.textFromInput}   
+             <button><Icon disabled name='shopping basket' />Del</button>
+                             
+            </div>
     )
 }
+export default TodoItem

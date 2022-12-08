@@ -1,16 +1,12 @@
-import { Icon } from 'semantic-ui-react'
+import TodoItem from './TodoItem'
 function TodoList ({data}) {    
    
 
     return (
         <div>
-            {data.map((listItem, index) => (
-                <div className="list_item" key={index}>
-                    <Icon disabled name='clipboard list' />
-                    {listItem}
-                    </div>
+            {data.map((listItem) => (
+                <TodoItem className="list_item" key={listItem.id} item={listItem} />            
             )
-
             )}
         </div>
     )
