@@ -9,3 +9,8 @@
   width: 300px;
   margin: 20px auto;
 }
+
+.active {
+  background-color: rgb(48, 199, 111);
+  color: white;
+}

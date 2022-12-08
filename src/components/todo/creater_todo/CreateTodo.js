@@ -5,11 +5,12 @@ function CreateTodo ({objectOfArray, setChangeArray}) {
         let newCreateObject = {}
         
         newCreateObject.textFromInput = document.querySelector(".taskName").value  
-        function getRandomId () {
+       
             newCreateObject.id = Math.floor(Math.random() * 10000)
-        }
-        getRandomId ()       
+            newCreateObject.isActive = false
+             
         let newInputArray = [...objectOfArray, newCreateObject]
+
         setChangeArray(newInputArray)
         console.log(newInputArray)
         document.querySelector(".taskName").value = ''                
