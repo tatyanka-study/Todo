@@ -8,8 +8,7 @@ function CreateTodo ({objectOfArray, setChangeArray}) {
         function getRandomId () {
             newCreateObject.id = Math.floor(Math.random() * 10000)
         }
-        getRandomId ()
-        // newCreateObject.id = () => Math.floor(Math.random() * 10000)
+        getRandomId ()       
         let newInputArray = [...objectOfArray, newCreateObject]
         setChangeArray(newInputArray)
         console.log(newInputArray)

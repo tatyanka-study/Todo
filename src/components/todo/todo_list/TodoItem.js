@@ -5,6 +5,7 @@ function TodoItem ({item}) {
         <div className="list_item">
              <Icon disabled name='clipboard list' /> {item.textFromInput}   
              <button><Icon disabled name='shopping basket' />Del</button>
+             <button><Icon disabled name='checkmark' />Done</button>
                              
             </div>
     )
