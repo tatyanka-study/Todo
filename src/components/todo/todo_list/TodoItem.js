@@ -1,6 +1,6 @@
 import { Icon } from "semantic-ui-react";
 
-function TodoItem({ item }) {
+function TodoItem({ item, callGetIdForDel }) {
   const toggleClass = (event) => {
     event.currentTarget.classList.toggle("active");
     item.isActive = !item.isActive;
@@ -9,6 +9,7 @@ function TodoItem({ item }) {
   const delThisItem = () => {
     let idForDelItem = item.id;
     console.log(idForDelItem);
+    callGetIdForDel(idForDelItem);
   };
 
   return (
