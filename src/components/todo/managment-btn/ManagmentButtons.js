@@ -22,13 +22,14 @@ function ManagmentButtons({ tasksForDel, setDelTasks }) {
 
   return (
     <div>
-      <Button.Group>
+      {tasksForDel.length === 0 ? (<h2>To Do list is empty</h2>) : (<Button.Group>
         <Button onClick={delAllTasks}>Reset All</Button>
         <Button.Or />
         <Button positive onClick={delDoneTasks}>
           Del Done
         </Button>
-      </Button.Group>
+      </Button.Group>)}
+      
     </div>
   );
 }
