@@ -1,15 +1,17 @@
 import { Icon } from "semantic-ui-react";
 
-function TodoItem({ item, callGetIdForDel }) {
+function TodoItem({ item, callGetIdForDel, resetData}) {
+
   const toggleClass = (event) => {
     event.currentTarget.classList.toggle("active");
-    item.isActive = !item.isActive;
+    let idForActiveItem = item.id;    
+       resetData(idForActiveItem)
+    
   };
 
   const delThisItem = () => {
     let idForDelItem = item.id;
-    console.log(idForDelItem);
-    callGetIdForDel(idForDelItem);
+        callGetIdForDel(idForDelItem);
   };
 
   return (
