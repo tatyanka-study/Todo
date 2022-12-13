@@ -18,8 +18,8 @@ function CreateTodo ({objectOfArray, setChangeArray}) {
     return (
         <div>
             <form>
-                <input type="text" placeholder="Enter your task todo" className="taskName" />
-                <button onClick={createNewTask}>Submit</button>
+                <input type="text" placeholder="Enter new todo" className="taskName" />
+                <button className="btn_submit" onClick={createNewTask} >Submit</button>
             </form>
         </div>
     )

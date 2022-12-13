@@ -16,16 +16,17 @@ function TodoItem({ item, callGetIdForDel, resetData}) {
 
   return (
     <div className="list_item">
-      <Icon disabled name="clipboard list" /> {item.textFromInput}
-      <button onClick={delThisItem}>
-        <Icon disabled name="shopping basket" />
-        Del
+      <Icon inverted color='green' disabled name="clipboard list" /> {item.textFromInput}
+      
+      <button title="The task is Done" onClick={toggleClass}>
+        <Icon disabled name="checkmark" />        
       </button>
-      <button className={item.isActive ? "active" : ""} onClick={toggleClass}>
-        <Icon disabled name="checkmark" />
-        Done
+
+      <button title="Delete this task" className="btn_del" onClick={delThisItem}>
+        <Icon disabled name="shopping basket" />        
       </button>
     </div>
   );
 }
 export default TodoItem;
+// className={item.isActive ? "active" : ""}

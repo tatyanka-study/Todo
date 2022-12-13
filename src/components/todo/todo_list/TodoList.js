@@ -9,7 +9,7 @@ function TodoList({ data, setChangeItem }) {
     arrayForChangeItemsStatus = data.map(item => {
       if (item.id === y) {
         item.isActive = !item.isActive
-      }
+      }      
       return item
     })
 
@@ -37,8 +37,3 @@ function TodoList({ data, setChangeItem }) {
   );
 }
 export default TodoList;
-
-
-
-// const testArray = [1,2,3]
-// testArray.map(item => item+10)

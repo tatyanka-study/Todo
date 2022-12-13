@@ -25,7 +25,7 @@ function ManagmentButtons({ tasksForDel, setDelTasks }) {
       {tasksForDel.length === 0 ? (<h2>To Do list is empty</h2>) : (<Button.Group>
         <Button onClick={delAllTasks}>Reset All</Button>
         <Button.Or />
-        <Button positive onClick={delDoneTasks}>
+        <Button primary onClick={delDoneTasks}>
           Del Done
         </Button>
       </Button.Group>)}
