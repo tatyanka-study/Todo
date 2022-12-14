@@ -5,21 +5,11 @@ body {
 }
 
 .App {
-  text-align: center;
-  
-}
-
-.active {
-color: #07c92c;
- }
-
- .btn_del:hover{
-  color: red;
- }
+  text-align: center;  
+} 
 
 form {
-  margin: 35px 0 25px 0px; 
-  
+  margin: 35px 0 25px 0px;   
 }
 
 .taskName {
@@ -31,18 +21,25 @@ form {
   font-size: 20px;
 }
 
-.taskNam:focus {
-  border-color: blue;
+.taskNam:focus-visible {
+  outline-color: cadetblue;
 }
 
 .btn_submit{
   height: 45px;
   width: 100px;
   border-radius: 6px;
-  background-color: bisque;
+  background-color: rgb(243, 223, 200);
   font-size: 18px;
   border: none;
   font-weight: bold;
+  cursor: pointer;
+}
+
+.btn_submit:hover {
+  background-color: rgb(79, 146, 79);
+  color: rgb(243, 223, 200);
+  border: 2px solid rgb(243, 223, 200);
 }
 
 .ui.buttons .button {
@@ -52,29 +49,3 @@ form {
 .ui.buttons .or {
   height: 3.571429em;
 }
-
-.list_item {
-  border: 2px solid grey;
-  border-radius: 6px;
-  height: 40px;
-  padding: 8px 0px 8px 0px;
-  width: 480px;
-  background-color: white;
-  margin: 20px auto;
-  color: black;
-  font-size: 18px;
-  font-weight: bold;
-  text-align: start;
-}
-
-.list_item > button {
-  float: right;
-  background-color:  white;
-  border: none;
-  margin-right: 10px;
-}
-
-.list_item > button:hover { 
- cursor: pointer;
- }
-

@@ -1,0 +1,41 @@
+.list_item {
+    border: 2px solid grey;
+    border-radius: 6px;
+    height: 40px;
+    padding: 8px 0px 8px 0px;
+    width: 480px;
+    background-color: white;
+    margin: 20px auto;
+    color: black;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: start;
+}
+  
+.list_item > button {
+    float: right;
+    background-color:  white;
+    border: none;
+    margin-right: 10px;
+}
+  
+.list_item > button:hover { 
+   cursor: pointer;
+}
+
+.list_item.active {
+    background-color:  #103d52;
+    color: grey;
+}
+  
+.list_item.active button {
+    background-color:  #103d52;
+}
+
+.btn_done:hover {
+    color: #07c92c;
+}
+    
+.btn_del:hover{
+    color: red;
+}    

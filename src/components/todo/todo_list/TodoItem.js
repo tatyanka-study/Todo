@@ -1,9 +1,10 @@
 import { Icon } from "semantic-ui-react";
+import listStyles from './list.module.css'
 
 function TodoItem({ item, callGetIdForDel, resetData}) {
-
+  console.log(listStyles)
   const toggleClass = (event) => {
-    event.currentTarget.classList.toggle("active");
+    event.currentTarget.parentElement.classList.toggle('active');
     let idForActiveItem = item.id;    
        resetData(idForActiveItem)
     
@@ -15,18 +16,17 @@ function TodoItem({ item, callGetIdForDel, resetData}) {
   };
 
   return (
-    <div className="list_item">
-      <Icon inverted color='green' disabled name="clipboard list" /> {item.textFromInput}
+    <div className={listStyles.list_item}>
+      <Icon inverted color={!item.isActive ? 'green' : 'grey'} disabled name="clipboard list" /> {item.textFromInput}
       
-      <button title="The task is Done" onClick={toggleClass}>
+      <button title="The task is Done" className={listStyles.btn_done} onClick={toggleClass}>
         <Icon disabled name="checkmark" />        
       </button>
 
-      <button title="Delete this task" className="btn_del" onClick={delThisItem}>
+      <button title="Delete this task" className={listStyles.btn_del} onClick={delThisItem}>
         <Icon disabled name="shopping basket" />        
       </button>
     </div>
   );
 }
 export default TodoItem;
-// className={item.isActive ? "active" : ""}

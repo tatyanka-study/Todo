@@ -5,6 +5,10 @@ function CreateTodo ({objectOfArray, setChangeArray}) {
         let newCreateObject = {}
         
         newCreateObject.textFromInput = document.querySelector(".taskName").value  
+        if (!newCreateObject.textFromInput) {
+           return alert("Please, enter new task")
+            
+        }
        
             newCreateObject.id = Math.floor(Math.random() * 10000)
             newCreateObject.isActive = false
@@ -19,7 +23,7 @@ function CreateTodo ({objectOfArray, setChangeArray}) {
         <div>
             <form>
                 <input type="text" placeholder="Enter new todo" className="taskName" />
-                <button className="btn_submit" onClick={createNewTask} >Submit</button>
+                <button className="btn_submit" onClick={createNewTask} onKeyDown={createNewTask} >Submit</button>
             </form>
         </div>
     )
