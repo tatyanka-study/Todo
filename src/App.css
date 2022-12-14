@@ -21,7 +21,7 @@ form {
   font-size: 20px;
 }
 
-.taskNam:focus-visible {
+.taskName:focus-visible {
   outline-color: cadetblue;
 }
 

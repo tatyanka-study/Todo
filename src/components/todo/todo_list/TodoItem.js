@@ -4,7 +4,7 @@ import listStyles from './list.module.css'
 function TodoItem({ item, callGetIdForDel, resetData}) {
   console.log(listStyles)
   const toggleClass = (event) => {
-    event.currentTarget.parentElement.classList.toggle('active');
+    // event.currentTarget.parentElement.classList.toggle('active');
     let idForActiveItem = item.id;    
        resetData(idForActiveItem)
     
@@ -16,7 +16,7 @@ function TodoItem({ item, callGetIdForDel, resetData}) {
   };
 
   return (
-    <div className={listStyles.list_item}>
+    <div className={listStyles.list_item + ' ' + (!item.isActive ? '' : listStyles.active) } >
       <Icon inverted color={!item.isActive ? 'green' : 'grey'} disabled name="clipboard list" /> {item.textFromInput}
       
       <button title="The task is Done" className={listStyles.btn_done} onClick={toggleClass}>
