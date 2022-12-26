@@ -1,27 +1,24 @@
 import Count from "./Count";
-import TodoItem from "./TodoItem";
+import TodoItem, { test } from "./TodoItem";
 
 function TodoList({ data, setChangeItem }) {
-  let arrayAfterDelItem = [];
-  let arrayForChangeItemsStatus = [];
-
-  function resetDataItems (y) {
-    arrayForChangeItemsStatus = data.map(item => {
+  function resetDataItems(y) {
+    const arrayForChangeItemsStatus = data.map((item) => {
       if (item.id === y) {
-        item.isActive = !item.isActive
-      }      
-      return item
-    })
+        item.isActive = !item.isActive;
+      }
+      return item;
+    });
 
-    setChangeItem(arrayForChangeItemsStatus)
-    console.log(arrayForChangeItemsStatus)
+    setChangeItem(arrayForChangeItemsStatus);
+    console.log(arrayForChangeItemsStatus);
   }
 
   function getIdForDel(x) {
-    arrayAfterDelItem = data.filter((item) => item.id !== x);
-    setChangeItem(arrayAfterDelItem);  
+    const arrayAfterDelItem = data.filter((item) => item.id !== x);
+    setChangeItem(arrayAfterDelItem);
   }
-  
+
   return (
     <div>
       {data.map((listItem) => (
@@ -32,7 +29,7 @@ function TodoList({ data, setChangeItem }) {
           resetData={resetDataItems}
         />
       ))}
-      <Count forCount={data}/>
+      <Count forCount={data} />
     </div>
   );
 }
